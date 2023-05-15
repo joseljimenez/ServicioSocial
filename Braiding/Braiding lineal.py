@@ -21,6 +21,7 @@ t_eq=10e11*3e8*m
 #Cosntantes para el Modelo G_3(X,phi)=mu*X**2.
 k=100  #cte del lagrangiano
 mu=5
+w=-1
 
 #Condiciones inciales:
 a_ini=1/3e3   #a_eq materia radiacion
@@ -41,6 +42,10 @@ def system(V,t):
     eval_2=eq_for_a(y,a)
     return [eval_1,eval_2]
     
+def P(rho):
+    return -w*rho
+
+
 #condiciones inciales
 i_conditions=[X_ini,a_ini]
 #print(i_conditions)

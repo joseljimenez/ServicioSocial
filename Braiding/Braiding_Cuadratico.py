@@ -23,7 +23,7 @@ t_uni=13.7e9*yr
 t_eq=10e11*3e8*m
 #Cosntantes para el Modelo G_3(X,phi)=mu*X**2.
 k=1e101  #cte del lagrangiano
-
+w=-1
 
 #Condiciones inciales:
 a_ini=1/3e3   #a_eq materia radiacion
@@ -40,6 +40,10 @@ def eq_for_y(y,a,phi):
 #EDO para y
 def eq_for_phi(y,a,phi):
     return y
+#Ecuacion para la presion
+def P(rho):
+    return -w*rho
+
 
 
 #Sistema de ecuaciones
